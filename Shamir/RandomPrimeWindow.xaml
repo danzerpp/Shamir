@@ -1,0 +1,31 @@
+﻿<Window x:Class="Shamir.RandomPrimeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Shamir"
+        mc:Ignorable="d"
+        Title="RandomPrimeWindow" Height="200" Width="370">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="30"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Margin="0,5,0,0" Grid.Row="1" Grid.Column="0">Zakres liczby pierwszej od:</Label>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="txtPrimeFrom" Margin="0,5,0,5" LostFocus="TxtPrimeFrom_OnLostFocus" TextAlignment="Center" VerticalContentAlignment="Center" TextChanged="OnTextChanged" PreviewTextInput="TxtSecretRange_PreviewInteger"></TextBox>
+        
+        <Label Margin="0,5,0,0"  Grid.Row="1" Grid.Column="2">do:</Label>
+        <TextBox Grid.Row="1" Grid.Column="3" Name="txtPrimeTo" Margin="0,5,5,5" TextAlignment="Center" VerticalContentAlignment="Center" TextChanged="OnTextChanged"></TextBox>
+        <Button Name="btnGeneratePrime" Grid.Row="2" Grid.ColumnSpan="4" Grid.Column="0" Margin="5,5,5,5" Click="BtnGeneratePrime_OnClick"  > Generuj liczbę pierwszą</Button>
+    </Grid>
+</Window>
